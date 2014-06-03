@@ -75,6 +75,39 @@ describe('next method', function() {
         expect(count).toBe(24);
     });
 
+    it("should return 6 permutations for 4 items in order when only 2 are unique",function() {
+        var seq = [1,1,2,2];
+        var count = 0;
+        while (seq != null){   
+            count++;
+            seq = permutate.next(seq);
+        }
+        expect(count).toBe(6);
+    });
+
+    it("should return 362880 permutations for 9 items in order",function() {
+        var seq = [0,1,2,3,4,5,6,7,8];
+        var count = 0;
+        while (seq != null){   
+            count++;
+            seq = permutate.next(seq);
+        }
+        expect(count).toBe(362880);
+    });
+
+    it("should return 3628800 permutations for 10 items in order",function() {
+        
+        var seq = [0,1,2,3,4,5,6,7,8,9];
+        var count = 0;
+        //var before = +new Date();
+
+        while (seq != null){   
+            count++;
+            seq = permutate.next(seq);
+        }
+        //console.log(+new Date() - before);
+        expect(count).toBe(3628800);
+    });
 })
 
 
