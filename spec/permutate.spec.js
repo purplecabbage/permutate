@@ -108,6 +108,18 @@ describe('next method', function() {
         //console.log(+new Date() - before);
         expect(count).toBe(3628800);
     });
+
+    it("should use provided sortingFunction",function() {
+        var obj = {
+            sortFunk:function(a,b) {
+                return a - b;
+            }
+        };
+        spyOn(obj, 'sortFunk');
+        permutate.next([0,1,2],obj.sortFunk);
+        expect(obj.sortFunk).toHaveBeenCalled();
+        expect(obj.sortFunk.calls.count()).toBe(3);
+    });
 })
 
 
