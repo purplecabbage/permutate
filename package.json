@@ -4,10 +4,7 @@
   "description": "next permutation from lexicographic order of an array, a'la Narayana Pandita in 14th century India.",
   "main": "permutate.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "scripts": {
-    "test": "jasmine-node --color spec"
+    "test": "jasmine-node spec"
   },
   "repository": {
     "type": "git",
@@ -18,7 +15,7 @@
     "permutation"
   ],
   "devDependencies": {
-    "jasmine-node": "~1"
+    "jasmine-node": "~2"
   },
   "author": "Jesse MacFadyen",
   "license": "Apache-2.0",
